@@ -5,8 +5,25 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:OOP_PROJECT"
              mc:Ignorable="d" 
-             Title="Add Jewelry" Height="450" Width="800">
+             Title="Add Jewelry" Height="250" Width="300">
     <Grid>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Type" Grid.Row="0" Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14"></Label>
+        <Label Content="Quantity" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14"></Label>
+        <ComboBox Grid.Row="0" Grid.Column="1" Height="23" Width="122">
+            <ComboBoxItem Content="Necklace"/>
+            <ComboBoxItem Content="Bracelet"/>
+            <ComboBoxItem Content="Ring"/>
+            <ComboBoxItem Content="Earrings"/>
+        </ComboBox>
+        <TextBox Name="txtQuantity" Grid.Row="1" Grid.Column="1" Height="23" Width="122"></TextBox>
     </Grid>
 </Window>

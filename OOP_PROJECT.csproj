@@ -56,12 +56,12 @@
     <Compile Include="AddTransaction.xaml.cs">
       <DependentUpon>AddTransaction.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Calculations.cs" />
+    <Compile Include="Calculations\Calculations.cs" />
     <Compile Include="Main.xaml.cs">
       <DependentUpon>Main.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Person.cs" />
-    <Compile Include="Product.cs" />
+    <Compile Include="Person\Person.cs" />
+    <Compile Include="Product\Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MainWindow.xaml.cs">
