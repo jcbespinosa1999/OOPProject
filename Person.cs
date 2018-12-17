@@ -14,74 +14,26 @@ namespace OOP_PROJECT
         public string BirthDate;
         public string Address;
 
+        public Person(string firstName, string lastName, string middleInitial ="")
+        {
+            FirstName = FormatName(firstName);
+            LastName = FormatName(lastName);
+            MiddleInitial = FormatName(middleInitial);
+        }
         public string GetFullName()
         {
-            return (CompleteLastName() + ", " + CompleteFirstName() + CompleteMiddleName());
+            return String.Format("{0} {1}. {2}", FirstName, MiddleInitial[0], LastName);
         }
-        public string CompleteFirstName()
+        private string FormatName(string name)
         {
-            string completeName = "";
-            string substituteName = "";
-            string[] ListOfNames = FirstName.Split(' ');
-
-            for (int firstCount = 0; firstCount < ListOfNames.Length; firstCount++)
-            {
-                for (int secondCount = 1; secondCount < ListOfNames[firstCount].Length; secondCount++)
-                {
-                    substituteName = substituteName + (char.ToLower(ListOfNames[firstCount][secondCount]));
-                }
-                ListOfNames[firstCount] = (char.ToUpper((ListOfNames[firstCount][0]))) + substituteName + " ";
-                completeName = completeName + ListOfNames[firstCount];
-                substituteName = "";
-            }
-
-            return completeName;
+            name = name.ToLower();
+            string[] names = name.Split(' ');
+            string formattedName = " ";
+            for (int counter = 0; counter < names.Length; counter++)
+                formattedName = formattedName + char.ToUpper(names[counter][0]) + names[counter].Substring(1) + " ";
+            return formattedName.Remove(formattedName.Length - 1);
         }
-        public string CompleteLastName()
-        {
-            string completeName = "";
-            string substituteName = "";
-            string[] ListOfNames = LastName.Split(' ');
-
-            for (int firstCount = 0; firstCount < ListOfNames.Length; firstCount++)
-            {
-                for (int secondCount = 1; secondCount < ListOfNames[firstCount].Length; secondCount++)
-                {
-                    substituteName = substituteName + (char.ToLower(ListOfNames[firstCount][secondCount]));
-                }
-                ListOfNames[firstCount] = (char.ToUpper((ListOfNames[firstCount][0]))) + substituteName + " ";
-                completeName = completeName + ListOfNames[firstCount];
-                substituteName = "";
-            }
-
-            return completeName;
-        }
-        public string CompleteMiddleName()
-        {
-            string completeName = "";
-            if (MiddleInitial.Length == 1)
-            {
-                completeName = char.ToUpper(MiddleInitial[0]) + ".";
-            }
-            else
-            {
-                string substituteName = "";
-                string[] ListOfNames = MiddleInitial.Split(' ');
-
-                for (int firstCount = 0; firstCount < ListOfNames.Length; firstCount++)
-                {
-                    for (int secondCount = 1; secondCount < ListOfNames[firstCount].Length; secondCount++)
-                    {
-                        substituteName = substituteName + (char.ToLower(ListOfNames[firstCount][secondCount]));
-                    }
-                    ListOfNames[firstCount] = (char.ToUpper((ListOfNames[firstCount][0]))) + substituteName + " ";
-                    completeName = completeName + ListOfNames[firstCount];
-                    substituteName = "";
-                }
-            }
-
-            return completeName;
-        }
+        
         public string GetBirthDate()
         {
             return BirthDate;

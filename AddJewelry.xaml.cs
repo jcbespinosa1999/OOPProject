@@ -24,5 +24,16 @@ namespace OOP_PROJECT
         {
             InitializeComponent();
         }
+        private void Quantity()
+        {
+
+        }
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            cmbJewel.Items.Add("Necklace");
+            cmbJewel.Items.Add("Bracelet");
+            cmbJewel.Items.Add("Earrings");
+            cmbJewel.Items.Add("Rings");
+        }
     }
 }

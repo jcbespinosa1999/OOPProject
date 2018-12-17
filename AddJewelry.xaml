@@ -18,12 +18,13 @@
         </Grid.ColumnDefinitions>
         <Label Content="Type" Grid.Row="0" Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14"></Label>
         <Label Content="Quantity" Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14"></Label>
-        <ComboBox Grid.Row="0" Grid.Column="1" Height="23" Width="122">
+        <ComboBox Name="cmbJewel" Grid.Row="0" Grid.Column="1" Height="23" Width="122" SelectionChanged="ComboBox_SelectionChanged">
             <ComboBoxItem Content="Necklace"/>
             <ComboBoxItem Content="Bracelet"/>
             <ComboBoxItem Content="Ring"/>
             <ComboBoxItem Content="Earrings"/>
         </ComboBox>
         <TextBox Name="txtQuantity" Grid.Row="1" Grid.Column="1" Height="23" Width="122"></TextBox>
+        <Button Content="Save"  Width="120" Height="23" Click="Button_Click" FontSize="14"  Grid.Column="1" Grid.Row="2"></Button>
     </Grid>
 </Window>

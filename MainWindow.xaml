@@ -8,31 +8,40 @@
              Title="MainWindow" Height="360" Width="600"
              WindowStartupLocation="CenterScreen">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="300"/>
-            <ColumnDefinition Width="300"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Label Content="First Name: " HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="134"/>
-        <Label Content="Middle Name: " HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Width="134"/>
-        <Label Content="Last Name: " HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" Width="134"/>
-        <TextBox Name="txtFirstName" HorizontalAlignment="Left" Height="23" Margin="96,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="txtFirstName_TextChanged"/>
-        <TextBox Name="txtMiddleName" HorizontalAlignment="Left" Height="23" Margin="96,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox Name="txtLastName" HorizontalAlignment="Left" Height="23" Margin="96,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Add Transaction" HorizontalAlignment="Left" Margin="105,268,0,0" VerticalAlignment="Top" Width="100" Click="Button_Click"/>
-        <ComboBox HorizontalAlignment="Left" Margin="96,151,0,0" VerticalAlignment="Top" Width="120">
+        <Label Content="First Name: " Grid.Column="0" Grid.Row="0" VerticalContentAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
+        <Label Content="Middle Name: "  Grid.Column="0" Grid.Row="1" VerticalContentAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
+        <Label Content="Last Name: "  Grid.Column="0" Grid.Row="2" VerticalContentAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
+        <TextBox Name="txtFirstName" Height="23" TextWrapping="Wrap" Width="120"  Grid.Column="1" Grid.Row="0" TextChanged="txtFirstName_TextChanged"/>
+        <TextBox Name="txtMiddleName" Height="23" TextWrapping="Wrap" Width="120"  Grid.Column="1" Grid.Row="1"/>
+        <TextBox Name="txtLastName" Height="23" TextWrapping="Wrap" Width="120"  Grid.Column="1" Grid.Row="2"/>
+        <Button Content="Add Transaction" Grid.Column="1" Grid.Row="4" Height="23" Width="120" Click="Button_Click"/>
+        <ComboBox Height="23" Width="120"  Grid.Column="1" Grid.Row="3" >
             <ComboBoxItem Content="Necklace"/>
             <ComboBoxItem Content="Bracelet"/>
             <ComboBoxItem Content="Ring"/>
             <ComboBoxItem Content="Earrings"/>
         </ComboBox>
-        <TextBox x:Name ="txtAddress" HorizontalAlignment="Left" Height="23" Margin="96,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name ="txtNumberOfItems" HorizontalAlignment="Left" Height="23" Margin="96,178,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Birthdate: " HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" Width="134"/>
-        <Label Content="Address: " HorizontalAlignment="Left" Margin="10,122,0,0" VerticalAlignment="Top" Width="134"/>
-        <Label Content="Jewelry: " HorizontalAlignment="Left" Margin="10,150,0,0" VerticalAlignment="Top" Width="134"/>
-        <Label Content="# of Items: " HorizontalAlignment="Left" Margin="10,178,0,0" VerticalAlignment="Top" Width="134"/>
-        <Label Content="Due Date: " HorizontalAlignment="Left" Margin="10,206,0,0" VerticalAlignment="Top" Width="134"/>
-        <DatePicker Name="txtBirthDate" HorizontalAlignment="Left" Margin="96,94,0,0" Height="23" VerticalAlignment="Top" Width="120"/>
-        <DatePicker HorizontalAlignment="Left" Margin="96,206,0,0" Height="23" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name ="txtAddress" Height="23"  TextWrapping="Wrap"  Width="120"  Grid.Column="3" Grid.Row="1" />
+        <TextBox x:Name ="txtNumberOfItems"  Height="23"  TextWrapping="Wrap"  Width="120"  Grid.Column="3" Grid.Row="2"/>
+        <Label Content="Birthdate: "  Grid.Column="2" Grid.Row="0" VerticalContentAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
+        <Label Content="Address: " Grid.Column="2" Grid.Row="1" VerticalContentAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
+        <Label Content="Jewelry: "  Grid.Column="0" Grid.Row="3" VerticalContentAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
+        <Label Content="# of Items: "  Grid.Column="2" Grid.Row="2" VerticalContentAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
+        <Label Content="Due Date: " Grid.Column="2" Grid.Row="3" VerticalContentAlignment="Center" HorizontalAlignment="Center" FontSize="14"/>
+        <DatePicker Name="txtBirthDate" Height="23" Width="120"  Grid.Column="3" Grid.Row="0"/>
+        <DatePicker Height="23" Width="120"  Grid.Column="3" Grid.Row="3"/>
     </Grid>
 </Window>
